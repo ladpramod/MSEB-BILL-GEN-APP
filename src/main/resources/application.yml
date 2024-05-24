@@ -1,0 +1,28 @@
+server:
+  port: 8080
+  error:
+    whitelabel:
+      enabled: false
+spring:
+  application:
+    name: MSEB-BILL-GEN-APP
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  data:
+    mongodb:
+      uri: mongodb+srv://jainpramodlad:pramod1234@cluster0.oq62ozn.mongodb.net/?retryWrites=true&w=majority
+      database: msebbilldb
+      auto-index-creation: true
+mail:
+  host: smtp.gmail.com
+  port: 587
+  username: jainpramodlad@gmail.com
+  password: kcosvqiknmkbnhol
+  protocol: smtp
+  properties:
+    mail:
+      smtp:
+        auth: true
+        starttls:
+          enable: true
