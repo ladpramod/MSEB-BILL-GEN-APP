@@ -1,30 +1,17 @@
 package com.mseb.bill.management.controller;
 
-import lombok.*;
-import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.MongoId;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 
-@Document(collection = "userdata")
-@Data
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
+@Controller
 
 public class userController {
 
-    @MongoId
+    public String hello(){
+        return "index";
+    }
 
 
-    private String userId;
-    private String name;
-    private String address;
-    private String city;
-    private String state;
-    private String mobile;
-    private String email;
-    private String password;
-    private String username;
 
 
 }
