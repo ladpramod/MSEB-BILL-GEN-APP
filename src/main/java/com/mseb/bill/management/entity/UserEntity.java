@@ -1,10 +1,11 @@
 package com.mseb.bill.management.entity;
 
+import jakarta.persistence.*;
 import lombok.*;
-import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.MongoId;
 
-@Document(collection = "userdata")
+
+@Entity
+
 @Data
 @Getter
 @Setter
@@ -12,8 +13,10 @@ import org.springframework.data.mongodb.core.mapping.MongoId;
 @NoArgsConstructor
 public class UserEntity {
 
-    @MongoId
-    private String userId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    private Integer userId;
     private String name;
     private String address;
     private String city;
